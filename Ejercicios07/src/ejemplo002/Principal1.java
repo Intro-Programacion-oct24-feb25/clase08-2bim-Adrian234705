@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package ejemplo002;
+
+import ejemplo001.*;
+
 /**
  *
  * @author reroes
@@ -23,7 +26,6 @@ public class Principal1 {
         double promedioEstudiante;
         int numeroNotasArribaPromedio;
         int [] filaNotas;
-        String mensajeFinal = "";
         for (int i = 0; i < nombres.length; i++) {
             nombre = nombres[i];
             apellido = apellidos[i];
@@ -32,25 +34,21 @@ public class Principal1 {
             numeroNotasArribaPromedio = funcion02(filaNotas, 
                     promedio_paralelo);
             tipoNotas = funcion03(filaNotas);
-            mensajeFinal = String.format("%s%s\n", mensajeFinal, 
-                    presentarReporte(nombre, apellido, tipoNotas, 
-                    promedioEstudiante, numeroNotasArribaPromedio));
+            presentarReporte(nombre, apellido, tipoNotas, 
+                    promedioEstudiante, numeroNotasArribaPromedio);
         }
-        CrearArchivoTexto.agregarRegistros(mensajeFinal);
-
     }
     
-    public static String presentarReporte(String nom, String ap, String notas, 
+    public static void presentarReporte(String nom, String ap, String notas, 
             double prom, int numeroNotas){
         String reporte = String.format("Nombres: %s\n"
                 + "Apellidos: %s\n"
                 + "Con notas: \n"
                 + "%s\n"
                 + "Promedio - %2f\n"
-                + "Número de notas arriba del promedio: %d\n\n",
+                + "Número de notas arriba del promedio: %d\n",
                 nom, ap, notas, prom, numeroNotas);
-        
-        return reporte;
+        System.out.printf("%s\n\n", reporte);
     }
 
     
