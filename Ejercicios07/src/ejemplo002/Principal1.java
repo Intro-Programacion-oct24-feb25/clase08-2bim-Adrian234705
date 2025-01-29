@@ -37,7 +37,15 @@ public class Principal1 {
             presentarReporte(nombre, apellido, tipoNotas, 
                     promedioEstudiante, numeroNotasArribaPromedio);
         }
+        //el mensaje final es lo que presenta lo que convertimos a archivo
+
     }
+    
+    public static String funcionUser(String nombre,String apellido){
+        
+    
+}
+
     
     public static void presentarReporte(String nom, String ap, String notas, 
             double prom, int numeroNotas){
@@ -60,7 +68,8 @@ public class Principal1 {
             for (int j = 0; j < n[0].length; j++) {
                 suma = suma + n[i][j];
                 contador = contador + 1;
-            }
+            }        
+
         }
         
         promedio = (double)suma/ contador;
@@ -114,6 +123,7 @@ public class Principal1 {
         
         return cadena;
     }
+
     
     
     
